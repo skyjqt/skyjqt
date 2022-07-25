@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    // 1.为抵抗洪水，战士连续作战89小时，编程计算共多少天零多少小时？
+    //输入作战时间，用time接收
+    // var time = prompt("请输入时间（小时）：");
+    // if(isNaN(time) || time<0){
+    //     alert("输入不合法")
+    // }else{
+    //     // //计算作战天数
+    //     var day = parseInt(time / 24) ;
+    //     // //取出余数，就是作战天数后的小时
+    //     var hour = time % 24;
+    //     // //显示题目答案
+    //     document.write("为抵抗洪水，战士连续作战"+time+"小时，编程计算共"+day+"天"+hour+"小时");
+    // }
+
+    //2.var k=0;  console.log(k++ + ++k +k +k++ );//
+    // var k = 0;
+    // console.log(k++ + ++k +k +k++);//6
+
+    //3.输入一个五位数，分别输出个十百千万位；
+    // var sum = prompt("请输入一个五位数");
+    // if (isNaN(sum) || sum > 99999 || sum < 10000) {
+    //     window.alert("输入不合法！")
+    // } else {
+    //     var bit = sum % 10;
+    //     var ten = parseInt((sum % 100) / 10)
+    //     var best = parseInt((sum % 1000) / 100)
+    //     var thuosund = parseInt((sum % 10000) / 1000)
+    //     var wan = parseInt(sum / 10000)
+    //     document.write("" + sum + "的个十百千万位是：个位：" + bit + "十位：" + ten + "百位：" + best + "千位：" + thuosund + "万位：" + wan + "")
+    // }
+
+    // 4.基本测试题，并写出详细理由;
+    // var bar = true;
+    // console.log(bar + 0);//1 会把true 隐示转换为1
+    // console.log(bar + "xyz"); //truexyz 加号两边有字符串的时候会进行字符串的拼接
+    // console.log(bar + true);//2 会把true 隐示转换位1
+    // console.log(bar + false);//1 会把 true隐示转换位1 false转换为0
+
+    // console.log(1 == true);//true true被隐式转换为1
+    // console.log(1 === true);//false === 全等 两边类型内容完全相同
+    // console.log(isNaN(23));//false isNaN判断是否为数字，是返回false 不是返回true
+    // console.log(isNaN('shuai'));//true 
+    // console.log(isNaN('321shuai'));//true
+    // console.log(isNaN('321'));//false isNaN会把数字字符隐式转换为数字
+    // console.log(NaN === NaN);//false NaN的值是不相同的
+    // console.log(typeof NaN);//number 他是用来检测数字的所以输出结果为数字类型
+    // console.log(1 + +"2" + "2");//32 
+    // console.log("A" - "B" + "2");//NaN2
+    // console.log("A" - "B" + 2);//NaN
+    // console.log(0 || 2 || 1)//2
+    // console.log(0 && 0 && false);//0
+    // console.log(0.2 + 0.4 == 0.6);//false IEEE754 算术标准带来的误差
+    // console.log(Boolean('0'));//true
+
+    var a = 10;
+    var b = 20;
+    var c = 10;
+    console.log(a = b);//10 会先输出a 然后将b的值赋给a  然后a=20
+    console.log(a == b);//true 上一步将后a=20 所以ab相等返回true
+    console.log(a == c);//false a=20 c=10 不相等返回false
+    
+</script>

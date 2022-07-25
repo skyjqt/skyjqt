@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    //1.编写一个函数，计算两个数字的和、差、积、商（要求：使用传参的形式）.
+    function compute(sum1,sum2,str){
+        if(str==='+') return sum1+sum2
+        else if(str==='-') return sum1-sum2
+        else if(str==='*') return sum1*sum2
+        else if(str==='/') return sum1/sum2
+        else console.log("输入不正确！") 
+        return false
+    }
+
+    console.log(compute(1,2,'+'))
+    console.log(compute(4,2,'-'))
+    console.log(compute(3,3,'*'))
+    console.log(compute(5,5,'/'))
+    compute(5,5,'%')
+</script>

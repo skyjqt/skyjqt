@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    // 1. 案例：输入年份，计算某一年是否是闰年（闰年能被4整除且不能被100整除，或能被400整除）；
+    // var year = +prompt("请输入一个年份")
+    // //判断输入格式是否正确
+    // if (!isNaN(year) && year <= 9999 && year > 1000) {
+    //     //判断是不是闰年
+    //     if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+    //         window.alert("是闰年")
+    //     } else {
+    //         window.alert("不是闰年")
+    //     }
+    // } else {
+    //     window.alert("输入格式不正确！")
+    // }
+
+
+    // 2. 案例：输入三个数字，输出三个数中最大的数字。
+    //  var sum1 = +prompt("请输入一个数字：");
+    //  var sum2 = +prompt("请输入一个数字：");
+    //  var sum3 = +prompt("请输入一个数字：");
+
+
+    //三目运算符
+    //     var max =sum1>sum2?(sum1>sum3?sum1:sum3):(sum2>sum3?sum2:sum3)
+    //     window.alert(max)
+    //  
+
+    // if else 
+    // if(sum1>sum2){
+    //     if(sum1>sum3){
+    //         window.alert(sum1)
+    //     }
+    //     else{
+    //         window.alert(sum3)
+    //     }
+    // }else{
+    //     if(sum2>sum3){
+    //         window.alert(sum2)
+    //     }else{
+    //         window.alert(sum3)
+    //     }
+    // }
+
+
+
+    // 3. 开发一款软件，根据公式（身高-108）*2=体重，可以有10斤左右的浮动。来观察测试者体重是否合适(身高：cm)
+    //结果：体重是否合适 1.偏重  2.标准  3.偏瘦
+    //输入：身高:height  体重:weight
+    //判断公式：(身高-108) * 2 = 体重 maxweight minweight
+    // var height = prompt("请输入你的身高");
+    // var weight = prompt("请输入你的体重");
+    // var standard = (height - 108) * 2
+    // var maxweight = standard + 10;
+    // var minweight = standard - 10;
+    // if(weight>maxweight){
+    //     window.alert("偏胖")
+    // }else if(weight<minweight){
+    //     window.alert("偏瘦")
+    // }else if(weight>=minweight && weight<=maxweight){
+    //     window.alert("标准")
+    // }else{
+    //     window.alert("输入不正确")
+    // }
+
+    // 4. 大家都知道，男大当婚，女大当嫁。那么女方家长要嫁女儿，当然要提出一定的条件：
+    //    高height：180cm以上; 富money:1000万以上; 帅handsome:颜值500以上;
+    //    如果这三个条件同时满足，则:‘我一定要嫁给他’
+    //    如果三个条件有为真的情况，则:‘嫁吧，比上不足，比下有余。’
+    //    如果三个条件都不满足，则:‘不嫁！’
+    // var height = +prompt("请输入身高：(cm)");
+    // var money = +prompt("请输入财富(万元)：");
+    // var handsome = +prompt("请输入颜值：");
+    // if(height>180 && money>1000 && handsome>500){
+    //     window.alert("我一定要嫁给他！");
+    // }else if(height>180 || money>1000 || handsome>500){
+    //     window.alert("嫁吧，比上不足，比下有余");
+    // }else{
+    //     window.alert("不嫁");
+    // }
+
+    // 5. 案例：输入分数，判定成绩等级(if和switch两种写法)（5个等级0-100）
+    //输入分数 score
+    //*if else
+    // var score = +prompt("请输入分数：");
+    // if(score>=0 && score<=100){
+    //     if(score>=90){
+    //         window.alert("A")
+    //     }else if(score>=80){
+    //         window.alert("B")
+    //     }else if(score>=70){
+    //         window.alert("C")
+    //     }
+    //     else if(score>=60){
+    //         window.alert("D")
+    //     }
+    //     else if(score<60){
+    //         window.alert("E")
+    //     }
+    // }else{
+    //     window.alert("输入格式不正确！")
+    // }
+
+    //swith
+    // var score = +prompt("请输入分数：");
+    // switch(true){
+    //     case score >=90 && score <=100:
+    //         window.alert("A");
+    //         break;
+    //     case score >= 80 && score <90:
+    //         window.alert("B");
+    //         break;
+    //     case score >= 70 && score <80:
+    //         window.alert("C");
+    //         break;
+    //     case score >= 60 && score <70:
+    //         window.alert("D");
+    //         break;
+    //     case score < 60 && score>=0:
+    //         window.alert("E");
+    //         break;
+    //     default:
+    //         window.alert("输入格式不正确！")
+    // }
+
+
+
+    // 6. 输入月份，显示当月的天数。 
+    //输入：年份（用于判断是否闰年）year 月份：month（用于判断天数） 
+    //月份：1 3 5 7 8 10 12 ：31天
+    //      4 6 9 11 : 30天
+    //      2:闰年：29天  非闰年28天
+
+    var year = +prompt("请输入年份：");
+    if(!isNaN(year) && year>=1000 && year<10000){
+        var month = prompt("请输入月份：");
+    if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
+        window / alert("这个月31天");
+    } else if (month == 4 || month == 6 || month == 9 || month == 11){
+        window.alert("这个月30天!");
+    }else if(month==2){
+        if((year%4==0 && year%100!=0) || year %400==0){
+            window.alert("是闰年，这个月29天")
+        }else{
+            window.alert("不是闰年，这个月28天")
+        }
+    }
+    else{
+        window.alert("月份输入不正确！")
+    }
+    }else{
+        window.alert("年份输入不正确！")
+    }
+    
+
+// 7. 扩展案例[需要提前了解DOM操作]：百度轮播图的简单实现。
+</script>
